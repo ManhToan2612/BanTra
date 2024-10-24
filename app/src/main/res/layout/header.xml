@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200sp"
+    android:background="#E7E4E5"
+    android:orientation="vertical"
+    android:padding="8sp">
+
+    <ImageView
+        android:layout_width="120sp"
+        android:layout_height="110sp"
+        android:alpha="0.85"
+        android:layout_gravity="center"
+        android:src="@drawable/logo1"
+        android:scaleType="fitXY"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18sp"
+        android:textColor="#151713"
+        android:text="Chào mừng "
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+</LinearLayout>
