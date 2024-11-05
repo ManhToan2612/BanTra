@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
@@ -25,41 +25,60 @@
         android:textSize="20dp"
         />
     <!-- Username Input -->
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tài khoản"
-        android:inputType="text" />
 
     <!-- Password Input -->
-    <EditText
-        android:id="@+id/password"
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Mật khẩu"
-        android:inputType="textPassword" />
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/in_User">
 
-    <!-- Login Button -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tên đăng nhập"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/in_Pass">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:hint="Mật khẩu"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <CheckBox
+        android:id="@+id/chkRememberPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="115dp"
+        android:text="Lưu Mật Khẩu" />
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Đăng nhập" />
 
-    <!-- Register Text -->
+
     <TextView
-        android:id="@+id/quenmatkhau"
+        android:id="@+id/btnDangky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quên mật khẩu?"
-        android:textColor="@android:color/holo_blue_dark"
-        android:layout_marginTop="16dp"/>
-    <TextView
-        android:id="@+id/registerText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Bạn không có tài khoản? Đăng ký tại đây"
-        android:textColor="@android:color/holo_blue_dark"
-        android:layout_marginTop="16dp"/>
+        android:textColor="@android:color/holo_blue_dark" />
 </LinearLayout>

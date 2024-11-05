@@ -17,10 +17,10 @@
             android:name=".DangKy_H"
             android:exported="false" />
         <activity
-            android:name=".DangNhap_H"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".DangNhap_H"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

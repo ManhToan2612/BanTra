@@ -8,14 +8,15 @@
     android:gravity="center"
     android:padding="16dp"
     tools:context=".DangKy_H">
+
+    <!-- Logo -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ĐĂNG KÝ"
         android:padding="10dp"
-        android:textSize="50dp"
-        />
-    <!-- Logo -->
+        android:text="ĐĂNG KÝ"
+        android:textSize="50dp" />
+
     <ImageView
         android:id="@+id/logoImage"
         android:layout_width="100dp"
@@ -24,34 +25,96 @@
         android:contentDescription="App Logo" />
 
 
-    <!-- Username Input -->
-    <EditText
-        android:id="@+id/username_dk"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Tên đăng nhập"
-        android:inputType="text" />
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập mã tài khoản "
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Password Input -->
-    <EditText
-        android:id="@+id/password_dk"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Mật khẩu"
-        android:inputType="textPassword" />
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txthoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập họ tên"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/password_cfdk"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nhập lại mật khẩu"
-        android:inputType="textPassword" />
-    <!-- Login Button -->
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtMatkhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập password"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNhaplai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập lại password"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtSoDienThoaiDK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập số điện thoại"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDiaChiDK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập địa chỉ"
+            android:layout_marginHorizontal="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnDK"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Đăng ký" />
-
+        android:text="Đăng ký"
+        android:textColor="@color/white"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="20dp"/>
+    <Button
+        android:id="@+id/btnGoBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quay lại"
+        android:textColor="@color/white"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="20dp"/>
 
 </LinearLayout>
