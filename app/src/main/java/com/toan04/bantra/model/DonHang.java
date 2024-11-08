@@ -11,6 +11,14 @@ public class DonHang {
     public DonHang() {
     }
 
+    public DonHang(String maAD, String hoTen, String ngayDatHang, int tongTien, String trangthai) {
+        this.maAD = maAD;
+        this.hoTen = hoTen;
+        this.ngayDatHang = ngayDatHang;
+        this.tongTien = tongTien;
+        this.trangthai = trangthai;
+    }
+
     public DonHang(String trangthai, int tongTien, String ngayDatHang, String hoTen, String maAD, int maDonHang) {
         this.trangthai = trangthai;
         this.tongTien = tongTien;

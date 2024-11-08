@@ -5,26 +5,30 @@ public class GioHang {
     private int maSanPham;
     private String maAD;
     private int soLuongMua;
-    private String tenGiay;
+    private String tenTra;
     private int giaTien;
     private int soLuong;
     private boolean isSelected;
     private String anhSP;
 
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
+
     public GioHang() {
     }
 
-    public GioHang(int maGioHang, int maSanPham, String maAD, int soLuongMua, String tenGiay, int giaTien, int soLuong, boolean isSelected, String anhSP) {
-        this.maGioHang = maGioHang;
-        this.maSanPham = maSanPham;
+    public GioHang(int maGiay, String maAD, int soLuongMua) {
+        this.maSanPham = maGiay;
         this.maAD = maAD;
         this.soLuongMua = soLuongMua;
-        this.tenGiay = tenGiay;
-        this.giaTien = giaTien;
-        this.soLuong = soLuong;
-        this.isSelected = isSelected;
-        this.anhSP = anhSP;
     }
+
 
     public int getMaGioHang() {
         return maGioHang;
@@ -58,12 +62,12 @@ public class GioHang {
         this.soLuongMua = soLuongMua;
     }
 
-    public String getTenGiay() {
-        return tenGiay;
+    public String getTenTra() {
+        return tenTra;
     }
 
-    public void setTenGiay(String tenGiay) {
-        this.tenGiay = tenGiay;
+    public void setTenTra(String tenTra) {
+        this.tenTra = tenTra;
     }
 
     public int getGiaTien() {
@@ -82,13 +86,6 @@ public class GioHang {
         this.soLuong = soLuong;
     }
 
-    public boolean isSelected() {
-        return isSelected;
-    }
-
-    public void setSelected(boolean selected) {
-        isSelected = selected;
-    }
 
     public String getAnhSP() {
         return anhSP;

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_margin="10sp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update trạng thái đơn hàng"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="24dp"
+        android:id="@+id/in_updonhang">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Trạng thái"
+            android:id="@+id/ed_updonhang"
+            android:focusable="false"
+            android:inputType="none"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Cập nhật"
+            android:textStyle="bold"
+            android:layout_marginRight="8dp"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:id="@+id/btnup"/>
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/orange"
+            android:textSize="17sp"
+            android:id="@+id/btnhuy"/>
+    </LinearLayout>
+
+
+</LinearLayout>

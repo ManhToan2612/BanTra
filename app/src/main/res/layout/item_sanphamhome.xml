@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="20dp"
+    android:paddingBottom="10dp"
+    android:id="@+id/sanphamhome"
+    android:background="@drawable/khung_radio_10"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="147dp"
+        android:id="@+id/imgAnhsp2"
+        android:layout_margin="2dp"
+        android:background="@drawable/khung_radio_10"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_ten_san_pham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên sản phẩm"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:padding="5dp" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số lượng: "
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/txt_so_luong_san_pham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text=""
+                android:layout_marginLeft="5dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá: "
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/txtgia_san_pham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giá sản phẩm"
+        android:textColor="@color/orange"
+        android:textSize="20sp"
+        />
+</LinearLayout>
+
+
+        <!--    <TextView-->
+        <!--        android:id="@+id/txt_so_luong_san_pham"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:text="Số lượng san pham "-->
+        <!--        android:layout_marginLeft="5dp"-->
+        <!--        android:textColor="@color/orange"-->
+        <!--        android:textSize="20sp" />-->
+
+        <Button
+            android:id="@+id/btn_themvaogiohang"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Thêm vào giỏ hàng"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:layout_margin="10dp" />
+        <TextView
+            android:id="@+id/txtHetHang"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Đã hết hàng"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -13,6 +13,14 @@ public class DonHangChiTiet {
     public DonHangChiTiet() {
     }
 
+    public DonHangChiTiet(int maDonHang, int maGiay, int soLuong, int donGia, int thanhTien) {
+        this.maDonHang = maDonHang;
+        this.maSanPham = maGiay;
+        this.soLuong = soLuong;
+        this.donGia = donGia;
+        this.thanhTien = thanhTien;
+    }
+
     public DonHangChiTiet(int maChiTietDonHang, String anhsp, int thanhTien, int donGia, int soLuong, String tenSanPham, int maSanPham, int maDonHang) {
         this.maChiTietDonHang = maChiTietDonHang;
         this.anhsp = anhsp;
