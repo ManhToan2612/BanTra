@@ -30,7 +30,8 @@
             <FrameLayout
                 android:id="@+id/frglayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:layout_marginBottom="80dp"/>
         </LinearLayout>
 
         <com.google.android.material.navigation.NavigationView

@@ -81,6 +81,8 @@ public class GioHangFragment extends Fragment implements GioHangAdapter.TotalPri
         btnmuahang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("GioHangFragment", "Nút thanh toán được nhấn");
+                Log.d("GioHangFragment", "Số lượng sản phẩm trong giỏ hàng khi thanh toán: " + list.size());
 
                 for (GioHang gioHang : list) {
                     if (gioHang.getSoLuong() == 0) {
@@ -122,7 +124,7 @@ public class GioHangFragment extends Fragment implements GioHangAdapter.TotalPri
                         for (GioHang gioHang : list){
                             if(gioHang.isSelected()){
 
-                                SanPham sanPham = SPDAO.getSanPhamById(gioHang.getMaSanPham());
+                                SanPham     sanPham = SPDAO.getSanPhamById(gioHang.getMaSanPham());
                                 if (sanPham != null){
                                     DonHangChiTiet donHangChiTiet = new DonHangChiTiet(orderId, gioHang.getMaSanPham(), gioHang.getSoLuongMua(), sanPham.getGiaTien(), gioHang.getSoLuongMua() * sanPham.getGiaTien());
                                     chiTietDao.insertDonHangChiTiet(donHangChiTiet);
@@ -160,13 +162,13 @@ public class GioHangFragment extends Fragment implements GioHangAdapter.TotalPri
                     Bundle bundle = new Bundle();
                     bundle.putInt("maDonHang", orderId);
 
-//                    ThanhToanFragment frgThanhToan = new ThanhToanFragment();
-//                    frgThanhToan.setArguments(bundle);
-//                    FragmentManager fragmentManager = getParentFragmentManager();
-//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//                    fragmentTransaction.replace(R.id.frglayout, frgThanhToan);
-//                    fragmentTransaction.addToBackStack(null);
-//                    fragmentTransaction.commit();
+                    ThanhToanFragment frgThanhToan = new ThanhToanFragment();
+                    frgThanhToan.setArguments(bundle);
+                    FragmentManager fragmentManager = getParentFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.frglayout, frgThanhToan);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
 
                 }else {
                     Toast.makeText(getContext(), "Thất bại!", Toast.LENGTH_SHORT).show();
@@ -209,4 +211,5 @@ public class GioHangFragment extends Fragment implements GioHangAdapter.TotalPri
             txttongtien.setText(String.valueOf(totalAmount));
         }
     }
+
 }

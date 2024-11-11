@@ -26,7 +26,7 @@ public class GioHangDAO {
         try {
 //
             Cursor c = database.rawQuery("SELECT GioHang.maGioHang,GioHang.maAD, SanPham.maSanPham, GioHang.soLuong, SanPham.tenSanPham,SanPham.giaTien, SanPham.soLuong, SanPham.anh" +
-                    " from GioHang,SanPham Where GioHang.maSanPham = Giay.maSanPham", null);
+                    " from GioHang,SanPham Where GioHang.maSanPham = SanPham.maSanPham", null);
             if (c.getCount() != 0) {
                 c.moveToFirst();
                 do {

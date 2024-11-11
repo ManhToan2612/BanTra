@@ -31,6 +31,7 @@ import com.toan04.bantra.Fragment.GioiThieuFragment;
 import com.toan04.bantra.Fragment.HomeFreagment;
 import com.toan04.bantra.Fragment.LichSuFragment;
 import com.toan04.bantra.Fragment.LienHeFragment;
+import com.toan04.bantra.Fragment.QLSanPhamFragment;
 import com.toan04.bantra.Fragment.QuanLyDonHangFragment;
 import com.toan04.bantra.Fragment.SanPhamFragment;
 import com.toan04.bantra.Fragment.UserFragment;
@@ -75,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
                     SanPhamFragment sanpham = new SanPhamFragment();
                     replay(sanpham);
                     dralayout.closeDrawer(GravityCompat.START, false);
+                }  else if (item.getItemId() == R.id.nav_quanlysanpham) {
+                    toolbar.setTitle("Quan ly ản phẩm");
+                    QLSanPhamFragment qlsanpham = new QLSanPhamFragment();
+                    replay(qlsanpham);
+                    dralayout.closeDrawer(GravityCompat.START, false);
                 }  else if (item.getItemId() == R.id.nav_quanlydonhang) {
                     toolbar.setTitle("Quản lý đơn hàng");
                     QuanLyDonHangFragment qldonhang = new QuanLyDonHangFragment();
@@ -82,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
                     dralayout.closeDrawer(GravityCompat.START, false);
                 } else if (item.getItemId() == R.id.nav_lichsu) {
                     toolbar.setTitle("Lịch sử đơn hàng");
-                    LichSuFragment qlthongke = new LichSuFragment();
-                    replay(qlthongke);
+                    LichSuFragment qllsdh = new LichSuFragment();
+                    replay(qllsdh);
                     dralayout.closeDrawer(GravityCompat.START, false);
                 }else if (item.getItemId() == R.id.nav_lienhe) {
                     toolbar.setTitle("Liên hệ");

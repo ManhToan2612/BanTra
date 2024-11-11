@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10sp"
+    android:layout_marginTop="10sp"
+    android:background="@drawable/khung_radio10"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp">
+
+        <TextView
+            android:id="@+id/txtmadonhang_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Mã loại sản: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtma_loai_san_pham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/txtmadonhang_label"
+            android:text=""
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imgDeleteLSP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7sp"
+            android:layout_marginRight="10sp"
+            android:background="@drawable/khung_radio10"
+            android:src="@drawable/ic_xoa" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp">
+
+        <TextView
+            android:id="@+id/manguoidung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="ten loại sản phẩm: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtten_loai_san_pham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/manguoidung"
+            android:textColor="@color/black"
+            android:text=""
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

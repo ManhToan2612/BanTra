@@ -5,15 +5,15 @@
         android:title="Giới thiệu"
         />
 
-    <item android:id="@+id/nav_sanpham"
-        android:title="Sản phẩm"
-        />
-
     <item android:id="@+id/nav_quanlydonhang"
         android:title="Quản lý đơn hàng"
         />
     <item android:id="@+id/nav_lichsu"
         android:title="Lịch sử đơn hàng"
+        />
+
+    <item android:id="@+id/nav_quanlysanpham"
+        android:title="Quan ly san pham"
         />
 
     <item android:id="@+id/nav_lienhe"

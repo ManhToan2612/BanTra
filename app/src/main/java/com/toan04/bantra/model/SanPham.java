@@ -21,9 +21,9 @@ public class SanPham {
         this.soLuong = soLuong;
         this.anh = anh;
     }
-    public SanPham(int maGiay, String tenGiay, int giaTien, int maLoai, int soLuong, String anh) {
-        this.maSanPham = maGiay;
-        this.tenSanPham = tenGiay;
+    public SanPham(int maSanPham, String tenSanPham, int giaTien, int maLoai, int soLuong, String anh) {
+        this.maSanPham = maSanPham;
+        this.tenSanPham = tenSanPham;
         this.giaTien = giaTien;
         this.maLoai = maLoai;
         this.soLuong = soLuong;

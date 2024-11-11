@@ -28,10 +28,10 @@ import com.toan04.bantra.DAO.GioHangDAO;
 import com.toan04.bantra.DAO.SanPhamDAO;
 import com.toan04.bantra.R;
 import com.toan04.bantra.adapter.GioHangAdapter;
-import com.toan04.bantra.adapter.SanPhamHAdapter;
+import com.toan04.bantra.adapter.SanPhamHomeAdapter;
 import com.toan04.bantra.model.GioHang;
 import com.toan04.bantra.model.SanPham;
-import com.toan04.bantra.model.Slideiten;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +41,7 @@ public class HomeFreagment extends Fragment {
 
     RecyclerView rcv;
     SanPhamDAO spdao;
-    SanPhamHAdapter sanPhamHomeAdapter;
+    SanPhamHomeAdapter sanPhamHomeAdapter;
     ArrayList<SanPham> list= new ArrayList<>();
     ArrayList<SanPham> tempListSanPham= new ArrayList<>();
     GioHangAdapter gioHangAdapter;
@@ -54,10 +54,6 @@ public class HomeFreagment extends Fragment {
         // Required empty public constructor
     }
 
-    ViewPager2 viewpage;
-    private List<Slideiten> slidelist;
-    private Handler slideHanlder = new Handler(Looper.getMainLooper());
-
 
 
     @Override
@@ -69,7 +65,7 @@ public class HomeFreagment extends Fragment {
         spdao= new SanPhamDAO(getContext());
         list = spdao.getDSSanPham();
         tempListSanPham = spdao.getDSSanPham();
-        sanPhamHomeAdapter = new SanPhamHAdapter(getContext(), list);
+        sanPhamHomeAdapter = new SanPhamHomeAdapter(getContext(), list);
         rcv.setAdapter(sanPhamHomeAdapter);
         gioHangDAO = new GioHangDAO(getContext());
         gioHangAdapter = new GioHangAdapter(new ArrayList<>(),getContext());
@@ -100,32 +96,32 @@ public class HomeFreagment extends Fragment {
         });
 
 
-//        StaggeredGridLayoutManager gridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-//        rcv.setLayoutManager(gridLayoutManager);
-//        sanPhamHomeAdapter = new SanPhamHAdapter(getContext(),list);
-//        rcv.setAdapter(sanPhamHomeAdapter);
-//        sanPhamHomeAdapter.notifyDataSetChanged();
-//
-//        sanPhamHomeAdapter.setOnAddToCartClickListener(new sanPhamHomeAdapter.OnAddToCartClickListener() {
-//            @Override
-//            public void onAddToCartClick(SanPham sanPham) {
-//                themVaoGio(sanPham);
-//            }
-//        });
-//
-//        sanPhamHomeAdapter.setOnItemClickListener(position -> {
-//            Bundle bundle = new Bundle();
-//            bundle.putInt("maGiay", list.get(position).getMaSanPham());
-//            bundle.putString("tenLoai", list.get(position).getTenLoai());
-//            SanPhamCTFragment sanPhamCTFragment = new SanPhamCTFragment();
-//            sanPhamCTFragment.setArguments(bundle);
-//
-//            FragmentManager fragmentManager = getParentFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//            fragmentTransaction.replace(R.id.frglayout, sanPhamCTFragment);
-//            fragmentTransaction.addToBackStack(null);
-//            fragmentTransaction.commit();
-//        });
+        StaggeredGridLayoutManager gridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        rcv.setLayoutManager(gridLayoutManager);
+        sanPhamHomeAdapter = new SanPhamHomeAdapter(getContext(),list);
+        rcv.setAdapter(sanPhamHomeAdapter);
+        sanPhamHomeAdapter.notifyDataSetChanged();
+
+        sanPhamHomeAdapter.setOnAddToCartClickListener(new SanPhamHomeAdapter.OnAddToCartClickListener() {
+            @Override
+            public void onAddToCartClick(SanPham sanPham) {
+                themVaoGio(sanPham);
+            }
+        });
+
+        sanPhamHomeAdapter.setOnItemClickListener(position -> {
+            Bundle bundle = new Bundle();
+            bundle.putInt("maSanPham", list.get(position).getMaSanPham());
+            bundle.putString("tenLoai", list.get(position).getTenLoai());
+            SanPhamCTFragment sanPhamCTFragment = new SanPhamCTFragment();
+            sanPhamCTFragment.setArguments(bundle);
+
+            FragmentManager fragmentManager = getParentFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.frglayout, sanPhamCTFragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        });
 
         return view;
     }
@@ -145,19 +141,6 @@ public class HomeFreagment extends Fragment {
         return new ViewModelStore();
     }
 
-
-    private Runnable sildeRunnable = new Runnable() {
-        @Override
-        public void run() {
-//            binding.viewpage.setCurrentItem(binding.viewpage.getCurrentItem() + 1);
-            int vitri =viewpage.getCurrentItem();
-            if (vitri == slidelist.size() - 1) {
-                viewpage.setCurrentItem(0);
-            } else {
-                viewpage.setCurrentItem(vitri + 1);
-            }
-        }
-    };
 
     private void themVaoGio(SanPham sanPham) {
         SharedPreferences sharedPreferences = getContext().getSharedPreferences("USER_FILE", MODE_PRIVATE);

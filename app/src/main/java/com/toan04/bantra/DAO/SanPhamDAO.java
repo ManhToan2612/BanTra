@@ -90,19 +90,14 @@ public class SanPhamDAO {
         String[] whereArgs = {String.valueOf(maSanPham)};
 
         // Thực hiện cập nhật
-        int rowsAffected = database.update("maSanPham", values, whereClause, whereArgs);
+        int rowsAffected = database.update("SanPham", values, whereClause, whereArgs);
 
         // Trả về true nếu có ít nhất một hàng bị ảnh hưởng
         return rowsAffected > 0;
     }
 
-
-
-
-
-
-    private static final String COL_MASP = "maGiay";
-    private static final String COL_TENSP = "tenGiay";
+    private static final String COL_MASP = "maSanPham";
+    private static final String COL_TENSP = "tenSanPham";
     private static final String COL_GIA = "giaTien";
     private static final String COL_MALOAI = "maLoai";
     private static final String COL_SOLUONG = "soLuong";
@@ -117,7 +112,7 @@ public class SanPhamDAO {
         String selection = COL_MASP + "=?";
         String[] selectionArgs = {String.valueOf(masanpham)};
 
-        Cursor cursor = database.query("Giay", columns, selection, selectionArgs, null, null, null);
+        Cursor cursor = database.query("SanPham", columns, selection, selectionArgs, null, null, null);
 
         if (cursor.moveToFirst()) {
             int maSanPham = cursor.getInt(cursor.getColumnIndex(COL_MASP));

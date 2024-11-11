@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.SanPhamCTFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:background="#F9F9F9"
+            android:layout_margin="16dp"
+            android:layout_gravity="start" />
+
+        <ImageView
+            android:id="@+id/imgAnhSPCT"
+            android:layout_width="match_parent"
+            android:layout_height="305dp" />
+
+        <TextView
+            android:id="@+id/txt_Ten_San_Pham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Ten san pham "
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txt_So_Luong_Ban"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Số lượng bán "
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txt_Gia_Ban"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Gia bán "
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txt_Ma_San_Pham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="ma san pham "
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txt_Loai_San_Pham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:text="Loại Sản Phẩm "
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/txtHetHangchitietsp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đã hết hàng"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!--            <Button-->
+        <!--                android:id="@+id/btn_Them_gio_hang_chi_tiet"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="40dp"-->
+        <!--                android:text="Thêm vào giỏ hàng"-->
+        <!--                android:background="@color/white"-->
+        <!--                android:textColor="@color/black"-->
+        <!--                android:layout_margin="10dp" />-->
+
+        <!--                <Button-->
+        <!--                    android:id="@+id/btn_Them_gio_hang_chi_tiet"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="40dp"-->
+        <!--                    android:text="Thêm vào giỏ hàng"-->
+        <!--                    android:background="@color/white"-->
+        <!--                    android:textColor="@color/black"-->
+        <!--                    android:layout_margin="10dp" />-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Các thành phần khác trong RelativeLayout -->
+
+            <Button
+                android:id="@+id/btn_Them_gio_hang_chi_tiet"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/green"
+                android:text="Thêm vào giỏ hàng"
+                android:textColor="@color/white" /> <!-- Đặt layout_alignParentBottom="true" -->
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

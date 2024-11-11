@@ -1,65 +1,74 @@
 package com.toan04.bantra.Fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.toan04.bantra.DAO.DonHangDAO;
 import com.toan04.bantra.R;
+import com.toan04.bantra.adapter.DonHangAdapter;
+import com.toan04.bantra.model.DonHang;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link LichSuFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
+
 public class LichSuFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private ArrayList<DonHang> list = new ArrayList<>();
+    private DonHangDAO dao;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private DonHangAdapter adapterDonHang;
+
+    RecyclerView rcv;
 
     public LichSuFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment LichSuFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static LichSuFragment newInstance(String param1, String param2) {
-        LichSuFragment fragment = new LichSuFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lich_su, container, false);
+        View view= inflater.inflate(R.layout.fragment_lich_su, container, false);
+        SharedPreferences preferences = requireActivity().getSharedPreferences("USER_FILE", Context.MODE_PRIVATE);
+        String maad = preferences.getString("maAD", "");
+
+        rcv = view.findViewById(R.id.rcv_Lich_Su_Don_Hang);
+        dao = new DonHangDAO(getContext());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
+        rcv.setLayoutManager(layoutManager);
+        list = dao.getDonHangByMaTaiKhoan(maad);
+        adapterDonHang = new DonHangAdapter(list, getContext());
+
+        rcv.setAdapter(adapterDonHang);
+        adapterDonHang.setOnItemClick(new DonHangAdapter.OnItemClick() {
+            @Override
+            public void onItemClick(int position) {
+                DonHang donHang = list.get(position);
+                int maDonHang = donHang.getMaDonHang();
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("maDonHang",maDonHang);
+                DonHangCTFragment donHangChiTietFragment = new DonHangCTFragment();
+                donHangChiTietFragment.setArguments(bundle);
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frglayout, donHangChiTietFragment);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+
+            }
+        });
+        return view;
     }
 }

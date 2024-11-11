@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm Sản Phẩm"
+        android:textSize="32dp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/in_addTenSP">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên sản phẩm"
+            android:id="@+id/ed_addTenSP"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/spnSanPham1"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/in_addGiaTien">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập giá tiền"
+            android:id="@+id/ed_addGiaTien"/>
+    </com.google.android.material.textfield.TextInputLayout>
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginHorizontal="10dp"-->
+<!--        android:id="@+id/in_addMoTa">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Nhập giá tiền"-->
+<!--            android:id="@+id/ed_addMoTa"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/in_addSoLuong">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập Số lượng"
+            android:id="@+id/ed_addSoLuong"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/in_addAnh">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập link ảnh"
+            android:id="@+id/ed_addAnh"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+<!--        <Button-->
+<!--            android:layout_width="170dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="ADD"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:backgroundTint="@color/orange"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="17dp"-->
+<!--            android:id="@+id/SP_add"/>-->
+<!--        <Button-->
+<!--            android:layout_width="170dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Cancel"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--            android:background="@color/orange"-->
+<!--            android:textSize="17dp"-->
+<!--            android:id="@+id/SP_Cancel"/>-->
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/SP_add"/>
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:backgroundTint="@color/orange"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:id="@+id/SP_Cancel"/>
+    </LinearLayout>
+
+</LinearLayout>
