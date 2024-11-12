@@ -66,17 +66,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.nav_gioithieu) {
-                    toolbar.setTitle("Giới Thiệu");
-                    GioiThieuFragment qlnguoidung = new GioiThieuFragment();
-                    replay(qlnguoidung);
-                    dralayout.closeDrawer(GravityCompat.START, false);
-                } else if (item.getItemId() == R.id.nav_sanpham) {
-                    toolbar.setTitle("Sản phẩm");
-                    SanPhamFragment sanpham = new SanPhamFragment();
-                    replay(sanpham);
-                    dralayout.closeDrawer(GravityCompat.START, false);
-                }  else if (item.getItemId() == R.id.nav_quanlysanpham) {
+                if (item.getItemId() == R.id.nav_quanlysanpham) {
                     toolbar.setTitle("Quan ly ản phẩm");
                     QLSanPhamFragment qlsanpham = new QLSanPhamFragment();
                     replay(qlsanpham);
@@ -153,7 +143,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        SharedPreferences sharedPreferences= getSharedPreferences("USER_FILE", MODE_PRIVATE);
+        String loaiTK= sharedPreferences.getString("loaiTK", "");
+        if (loaiTK.equals("admin")) {
+            // Ẩn menu item lịch sử đơn hàng cho tài khoản admin
+            navigationView.getMenu().findItem(R.id.nav_lichsu).setVisible(false);
+        } else if (loaiTK.equals("khachhang")) {
+            // Ẩn các menu item khác ngoại trừ lịch sử đơn hàng cho tài khoản khách hàng
+            navigationView.getMenu().findItem(R.id.nav_quanlynguoidung).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_quanlysanpham).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_quanlydonhang).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_thongke).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_doiMatKhau).setVisible(true); // Hiển thị đổi mật khẩu
+        }
 
     }
 

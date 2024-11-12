@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 public class Dbhelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "BanTra";
-    private static final int DbVersion = 1;
+    private static final int DbVersion = 3;
 
     public Dbhelper(@Nullable Context context) {
         super(context, DB_NAME,null, DbVersion);
@@ -79,16 +79,16 @@ public class Dbhelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("INSERT INTO loaiSanPham VALUES ('1', 'Tra xanh')," +
                 "('2', 'Tra kho')");
 
-        sqLiteDatabase.execSQL("INSERT INTO SanPham VALUES (1, 'Hồng trà', 30000, 1, 12,'https://athenavshop.com/wp-content/uploads/2022/02/Giay-Hatsune-Miku-High-Top-Odyssey-Sneaker-thumb1.jpg')," +
-                "(2, 'Hồng trà', 40000, 2,13,'https://rubystore.com.vn/wp-content/uploads/2021/07/giay-dior-b27-mid-top-sneaker-blue-gray-and-white-sieu-cap.jpg')," +
-                "(3, 'Hồng trà', 54444, 2,12,'https://product.hstatic.net/1000284478/product/1062_snw0133_3_5a9a9c18eaa041f68c7ca29565dbef7c_master.jpg')," +
-                "(4, 'Hồng trà', 84444, 1,12,'https://shopgiayreplica.com/wp-content/uploads/2023/08/walkndior-high-top-platform-sneaker-deep-blue-dior-oblique-embroidered-cotton-avarta.jpg')," +
-                "(5, 'Hồng trà', 1244844, 2,12,'https://igl.prodoc.site/images/auctions13/e7e3d47e932ca3a211a8f6da6ab58d1f-i-img900x900-1648916922sb8g8x21.jpg')," +
-                "(6, 'Hồng trà', 3448444, 2,12,'https://admin.thegioigiay.com/upload/product/2023/01/giay-sneaker-nu-basic-de-banh-mi-phoi-mau-tim-size-37-63b8d09c75c5b-07012023085332.jpg')," +
-                "(7, 'Hồng trà', 7844844, 1,12,'https://www.vascara.com/uploads/cms_productmedia/2023/October/31/giay-sneaker-co-cao-voi-dem-thoang-khi---snk-0069---mau-den__72268__1698769011.jpg')," +
-                "(8, 'Hồng trà', 794444, 2,12,'https://hanoi26sneaker.com/wp-content/uploads/2022/01/Giay-Sneaker-Vans-Checkerboard-Plaid-Tiffany-Blue-Mid-top-chat-luong-scaled.jpg')," +
-                "(9, 'Hồng trà', 804844, 2,12,'https://athenavshop.com/wp-content/uploads/2020/10/Giay-Hatsune-Miku-Low-Top-Sneaker-1.jpg')," +
-                "(10, 'Hồng trà', 50000, 1, 10,'https://tungluxury.com/wp-content/uploads/2022/11/giay-dior-b27-low-top-sneaker-blue-white-6.jpg')");
+        sqLiteDatabase.execSQL("INSERT INTO SanPham VALUES (1, 'Hồng trà', 30000, 1, 12,'https://bizweb.dktcdn.net/thumb/grande/100/025/663/files/hong-tra-oha-tra-sua-01.jpg?v=1610389060750')," +
+                "(2, 'Trà khô', 40000, 2,13,'https://goodprice.vn/files/common/la-tra-xanh-say-kho-b1fs5.jpg')," +
+                "(3, 'Trà xanh', 54444, 2,12,'https://danhtra.com/wp-content/uploads/2019/04/56769858_6146052593024_5529686684687400960_n.jpg')," +
+                "(4, 'Trà ô long', 84444, 1,12,'https://huyenhashop.com/wp-content/uploads/2021/01/tra-o-long-01.jpg')," +
+                "(5, 'Bạch trà', 1244844, 2,12,'https://file.hstatic.net/1000135323/file/bach-tra-1_48227381ddf3408387c6e78a605ec1c3_1024x1024.jpg')," +
+                "(6, 'Hoàng trà', 3448444, 2,12,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJwNbcYdsFIAQp1H5k1ibPMcRchpW6IXDphg&s')," +
+                "(7, 'Trà đen', 7844844, 1,12,'https://www.tita.art/wp-content/uploads/2023/06/cac-loai-tra-den.jpg')," +
+                "(8, 'Trà shan tuyết', 794444, 2,12,'https://www.traviet.com/wp-content/uploads/2015/06/tra-tuyet-zoom1-800x800.jpg')," +
+                "(9, 'Trà nhài', 804844, 2,12,'https://nguyenlieuantoan.com/assets/upload/products/1645086311_tra-nhai-a.jpg?v=0.0.3.1')," +
+                "(10, 'Trà bá tuớc', 50000, 1, 10,'https://cdn.tgdd.vn/2021/11/CookDish/tra-earl-grey-la-gi-cong-dung-cua-tra-earl-grey-n-avt-1200x676.jpg')");
     }
 
     @Override
