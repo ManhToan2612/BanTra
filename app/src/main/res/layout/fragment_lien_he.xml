@@ -5,10 +5,132 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.LienHeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        //
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/tx">
+            </LinearLayout>
+            //
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="LIÊN HỆ"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="25sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#494646" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÁT TRIỂN TRÀ TIÊN THIÊN"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Trụ sở công ty: Tòa nhà Emime – Số 5 ngõ 23 Lê Văn Lương, Phường Nhân Chính, Quận Thanh Xuân, Thành phố Hà Nội"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Điện thoại: 0812551368"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Email: tienthientea@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Mã số thuế: 0109288675"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Sản phẩm: Trà cao cấp"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:text="TIÊN THIÊN TRÀ"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="7dp"
+                android:background="#494646" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Tiên thiên là khoi nguyên của Vũ tru, là nguyên khi của trời đất, là khí Thuần Dương thúc đẩy muôn loài hóa sinh...Chè Shan Tuyết Cổ Thụ là loài cây quý hiếm hấp thụ dồi dào chân khi Tiên Thien, loai trà thu hoạch đó được gọi la Tiên Thiên Tra."
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textStyle="bold"
+                android:text="Không gian trai nghiệm Văn hóa Trà Tiên Thiên, số 55 đường Nguyễn Hy Quang, Ô Chợ Dừa, Đống Đa-Hà Nội."
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Sản xuất bởi: Cong ty trach nhiem huu han san xuat TRA TIEN THIEN"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Địa chi: xã Tả Thàng, huyện Mường Khương, tỉnh Lào Cai"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Phan phối bởi: Công ty cổ phần dầu tư và phát triển TRÀ TIÊN THIÊN"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Mã số thuế: 0109288675"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
