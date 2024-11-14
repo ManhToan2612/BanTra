@@ -155,19 +155,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        SharedPreferences sharedPreferences= getSharedPreferences("USER_FILE", MODE_PRIVATE);
-//        String loaiTK= sharedPreferences.getString("loaiTK", "");
-//        if (loaiTK.equals("admin")) {
-//            // Ẩn menu item lịch sử đơn hàng cho tài khoản admin
-//            navigationView.getMenu().findItem(R.id.nav_lichsu).setVisible(false);
-//        } else if (loaiTK.equals("khachhang")) {
-//            // Ẩn các menu item khác ngoại trừ lịch sử đơn hàng cho tài khoản khách hàng
-//            navigationView.getMenu().findItem(R.id.nav_quanlynguoidung).setVisible(false);
-//            navigationView.getMenu().findItem(R.id.nav_quanlysanpham).setVisible(false);
-//            navigationView.getMenu().findItem(R.id.nav_quanlydonhang).setVisible(false);
-//            navigationView.getMenu().findItem(R.id.nav_thongke).setVisible(false);
-//            navigationView.getMenu().findItem(R.id.nav_doiMatKhau).setVisible(true); // Hiển thị đổi mật khẩu
-//        }
+        SharedPreferences sharedPreferences= getSharedPreferences("USER_FILE", MODE_PRIVATE);
+        String loaiTK= sharedPreferences.getString("loaiTK", "");
+        if (loaiTK.equals("admin")) {
+            // Ẩn menu item lịch sử đơn hàng cho tài khoản admin
+            navigationView.getMenu().findItem(R.id.nav_lichsu).setVisible(false);
+        } else if (loaiTK.equals("khachhang")) {
+            // Ẩn các menu item khác ngoại trừ lịch sử đơn hàng cho tài khoản khách hàng
+            navigationView.getMenu().findItem(R.id.nav_quanlynguoidung).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_quanlysanpham).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_quanlydonhang).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_thongke).setVisible(false);
+            navigationView.getMenu().findItem(R.id.nav_doiMatKhau).setVisible(true); // Hiển thị đổi mật khẩu
+        }
 
     }
 
